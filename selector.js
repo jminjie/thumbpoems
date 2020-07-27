@@ -42,7 +42,10 @@ function next() {
 
 function setPoem() {
     poemNumber = getPoemNumber();
-    document.getElementById('poem_image').src = 'poems/' + poemNumber;
+    var img = new Image;
+    img.src = 'poems/' + poemNumber;
+    img.id = 'poem_image';
+    document.getElementById('poem').appendChild(img);
     fetchAndSetTranscription(poemNumber);
 }
 
